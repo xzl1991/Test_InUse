@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- the proxool configuration can be embedded within your own application's. 
+	Anything outside the "proxool" tag is ignored. -->
+
+<something-else-entirely>
+	<proxool>
+		<alias>sqlserver</alias>
+		<driver-url>jdbc:jtds:sqlserver://123.103.36.11;DatabaseName=Ask_Data_test
+		</driver-url>
+		<driver-class>net.sourceforge.jtds.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="Ask_Data_test_admin" />
+			<property name="password" value="37aa773B" />
+		</driver-properties>
+		<house-keeping-sleep-time>9000</house-keeping-sleep-time>
+		<maximum-new-connections>20</maximum-new-connections>
+
+		<prototype-count>5</prototype-count>
+
+		<maximum-connection-count>500</maximum-connection-count>
+
+		<minimum-connection-count>50</minimum-connection-count>
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+		<house-keeping-test-sql>select CONVERT(VARCHAR(30),GETDATE(),111)</house-keeping-test-sql>
+	</proxool>
+</something-else-entirely>

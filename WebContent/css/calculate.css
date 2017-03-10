@@ -1,0 +1,16 @@
+{margin:0px; padding:0px;}
+	      
+   body {
+	font-size: 12px; 
+	margin: 60px auto;
+	height: auto;
+	width: 805px;
+	}
+.vals{width:80px;color: green;}
+.cals{float: left;
+height: 30px;
+width: 335px;
+color: #0099CC;
+align:center;
+background-color: lightgreen;
+font-size: 16px;}

@@ -1,0 +1,57 @@
+* { margin:0; padding:0;}
+ul,ol,li{list-style: none;padding: 0px;margin:6px;float: left }
+#menu *{line-height: 30px}
+#menu a{
+	text-decoration: none;
+	display: bolck;
+}
+//设置 层中的 ul
+#menu ul{
+	text-align: left;
+	background-color: #FF0033;
+}
+//设置 class 为 arrow的标签
+#menu .arrow{
+	padding-right: 6px;
+}
+#menu>ul{height:30px;}
+//设置 层下的 ul 下的 li标签
+#menu>ul>li{
+	text-align: center;
+	display: inline-block;
+	width:80px;
+}
+//设置 层下的 ul 下的 li 下的 a标签
+#menu>ul>li>a{color:#FFFFFF;}
+#menu>ul>li:hover{background-color: #FF3399;}
+
+#menu>ul>li ul{
+	display: none;
+	width:150px;
+	position: absolute;
+	background-color: #C1Cd94;
+	box-shadow:3px 2px 3px #000000;
+	-webkit-box-shadow:4px 4px 4px #000000;
+	-moz-box-shadow:2px 2px 2px #225599;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

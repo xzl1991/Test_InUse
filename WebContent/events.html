@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/jquery.js"></script>
+<title>Insert title here</title>
+	<script type="text/javascript">
+	function show(){
+		var str="";
+		str += "事件类型:"+event.type+"\n<br>" ;
+		str +="鼠标X坐标:"+event.x+"\n<br>";
+		str +="鼠标y坐标:"+event.y+"\n<br>";
+		//得到触发对象
+		var val = event.srcElement;
+		str+=val.type+"."+val.value+"<br>";
+		//鼠标事件的按键
+		str += "event的值:"+event.button+"\n<br>" ;
+		//得到键盘事件的按键值
+		str += "键盘事件类型:"+event.keyCode+"\n<br>" ;
+		document.write("<br><br><div align='center'><h1><font color='red'>"+str+"</h1><a href='getId();'>点我...</a></div>");
+	}
+	function getId(data){ 
+		alert("hhhh");
+		url='https://xzl1991.github.io/Test/';
+		$("#bb").attr("bb",data);//ID
+		$("#aa").attr("action",url);
+		$("#aa").submit;
+		alert("hhhh22");
+	} 
+</script>
+</head>
+<body>
+<h2><font color="red">四.event 对象</font></h2>
+<h3><font color="purple">
+event对象方法:
+输入:<input type="text" value=""  onkeypress="show()" >
+<input type="button" value="事件源"   onclick="show()">
+</font></h3>
+<form name="aa" id ="aa" method="post" action="">
+<input type="hidden" id="bb" name="bb" value=""/>
+</form>
+<a href="#" onclick="getId();">点我11...</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

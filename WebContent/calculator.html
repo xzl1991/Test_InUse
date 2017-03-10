@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>自己实现的计算器</title>
+	<style type="text/css">
+	      *{margin:0px; padding:0px;}
+	      body{
+			font-size: 12px; 
+			margin: 60px auto;
+			height: auto;
+			width: 805px;
+			background-color:#D3D3D3; 
+			background-Image:url(img/01.jpg);
+			background-repeat:no-repeat;
+			background-position: 0 0; 
+			background-position: 75px 0;
+			background-position: -75px 0;
+			background-position: 0 100px
+			}
+		.vals{width:80px;color: green;}
+		.cir{width:80px;color: blue;}
+		.cals{float: left;
+			height: 60px;
+			width: 335px;
+			color: #0099CC;
+			align:center;
+			background-color: lightgreen;
+			font-size: 16px;}
+	</style>
+</head>
+
+<body>
+	<script type="text/javascript">
+	/* var "+" = "+";
+	var "-" = "-";
+	var "/" = "/";
+	var "." = "."; */
+	function compute(obj){
+		//^((?!ABC)\w)+$
+	/* 	var reg= /^((?m)(\S+)\s+((\S+)\s+(\S+))$/;//((\d)(?!\1)(\d)(?<!\2))(\1)/;(.)\1; /^\w*(\w\w)\1\w*$/
+		alert(reg.test("ABAB")); */
+		var values=document.getElementById("cal");
+		values.value = eval(values.value);
+		//alert("计算器"+(values));
+	}
+	function enter(obj){
+		document.getElementById("cal").value += obj;
+		//doucment.getElementById("cal").value=obj;
+	}
+	function clears(){
+		document.getElementById("cal").value ='';
+	}
+	function cir(){
+		//让用户输入半径
+		//alert("开始");
+		var r = prompt("请输入圆的半径:");
+		//计算周长
+		var perimeter = 2*Math.PI*r;
+		//计算面积
+		var area = Math.PI*Math.pow(r, 2)
+		
+		perimeter1 =( Math.round(perimeter*1000)/1000);
+		area1 =( Math.round(area*1000)/1000);
+		var val = "R为:"+r+"的圆 周长是:"+perimeter1+"面积是:"+area1;
+		
+		alert("半径为"+r+"的圆的周长是:"+perimeter+"\n\n面积是:"+area);
+		enter(val);
+	}
+	
+	function parse(){
+		var str =document.getElementById("cal").value;		
+		var obj1 = parseInt(str);
+		alert(obj1.NaN);
+		var s = parseInt(obj1,16);
+		var t = parseInt(obj1,10);
+		var t1 = parseInt(obj1,2);
+	
+		document.getElementById("cal").value+=" 10进制:"+t+"  16进制:"+s+"  二进制:"+t1;
+		alert(from);
+	}
+	</script>
+	<form action="" name="cal" >
+		<table border="5px" class="tb">
+			<td colspan="4" bgcolor="green"><div id="cals" ><input class="cals" id="cal" type="text" readonly="readonly" size="50"  ></div></td>
+			<tr>
+				<td><input class="vals"  value="7" type="button" onclick="enter(7)"></td>
+				<td><input class="vals"  value="8" type="button" onclick="enter(8)"></td>
+				<td><input class="vals" value="9" type="button" onclick="enter(9)"></td>
+				<td><input class="vals"  value="/" type="button" onclick="enter('/')"></td>
+			</tr>
+			<tr>
+				<td><input class="vals" value="4" type="button" onclick="enter(4)"></td>
+				<td><input class="vals" value="5" type="button" onclick="enter(5)"></td>
+				<td><input class="vals" value="6" type="button" onclick="enter(6)"></td>
+				<td><input class="vals" value="+" type="button" onclick="enter('+')"></td>
+			</tr>
+			<tr>
+				<td><input class="vals" value="1" type="button" onclick="enter(1)"></td>
+				<td><input class="vals" value="2" type="button" onclick="enter(2)"></td>
+				<td><input class="vals" value="3" type="button" onclick="enter(3)"></td>
+				<td><input class="vals" value="-" type="button" onclick="enter('-')"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input class="vals" value="0"  type="button" onclick="enter(0)"></td>
+				<td><input class="vals" value="." type="button" onclick="enter('.')" width="200px"></td>
+				<td><input class="vals" value="*" type="button" onclick="enter('*')"></td>
+			</tr>
+			<tr colspan=2>
+				<td><input class="vals" value="=" type="button" onclick="compute()"></td>
+				<td><input class="vals" value="清空" type="button" onclick="clears()"></td>
+				<td><input class="cir" class="vals" value="计算圆" type="button" onClick="clears();cir()"></td>
+				<td><input class="cir" class="vals" value="进制转换到十进制" type="button" onClick="parse()"></td>
+			</tr>
+		</table>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</form>
+</body>
+</html>

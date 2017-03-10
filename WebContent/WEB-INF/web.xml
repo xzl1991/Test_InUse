@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <listener>
+  	<listener-class>a_listener_Task.MyScheduleListener</listener-class>
+  </listener>
+  <servlet>  
+        <servlet-name>ServletConfigurator</servlet-name>  
+        <servlet-class>  
+            org.logicalcobwebs.proxool.configuration.ServletConfigurator  
+        </servlet-class>  
+        <init-param>  
+            <param-name>xmlFile</param-name>  
+            <param-value>WEB-INF/proxool.xml</param-value>  
+        </init-param>  
+        <load-on-startup>1</load-on-startup>  
+    </servlet>  
+    <!--   
+        配置连接池的监视路径  
+        检视 pooling 现在状态   
+    -->  
+    <servlet>  
+        <servlet-name>Admin</servlet-name>  
+        <servlet-class>  
+            org.logicalcobwebs.proxool.admin.servlet.AdminServlet  
+        </servlet-class>  
+    </servlet>  
+    <servlet-mapping>  
+        <servlet-name>Admin</servlet-name>  
+        <url-pattern>/admin</url-pattern>  
+    </servlet-mapping>  
+    <servlet>  
+  <servlet-name>CodeService</servlet-name>  
+    <servlet-class>com.testServlet.CodeServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>CodeService</servlet-name>  
+    <url-pattern>/code.jspx</url-pattern>  
+  </servlet-mapping>  
+    <!--   
+    配置受保护域，只有Tomcat管理员才能察看连接池的信息   
+    <security-constraint>  
+        <web-resource-collection>  
+            <web-resource-name>proxool</web-resource-name>  
+            <url-pattern>/admin</url-pattern>  
+        </web-resource-collection>  
+        <auth-constraint>  
+            <role-name>manager</role-name>  
+        </auth-constraint>  
+    </security-constraint>  
+    <login-config>  
+        <auth-method>BASIC</auth-method>  
+        <realm-name>proxool manager Application</realm-name>  
+    </login-config>  
+    <security-role>  
+        <description>  
+            The role that is required to log in to the Manager  
+            Application  
+        </description>  
+        <role-name>manager</role-name>  
+    </security-role>  
+    <error-page>  
+        <error-code>401</error-code>  
+        <location>/401.jsp</location>  
+    </error-page>  
+    -->  
+  
+  <servlet>
+  	<description>自定义</description>
+  	<servlet-name>TestServlet</servlet-name>
+  	<servlet-class>com.testServlet.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestServlet</servlet-name>
+  	<url-pattern>/Postdo</url-pattern>
+  </servlet-mapping>
+  
+<!--  
+  <filter>
+  <filter-name>struts2</filter-name>
+  <filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>struts2</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping> 
+	<filter-mapping>
+		<filter-name>*.jsp</filter-name>
+			<url-pattern></url-pattern>
+	</filter-mapping> 
+	-->
+</web-app>
+
+
+

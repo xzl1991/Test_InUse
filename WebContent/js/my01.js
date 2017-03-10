@@ -1,0 +1,1 @@
+document.write("引用了自定义的js");

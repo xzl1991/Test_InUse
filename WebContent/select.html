@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>选项卡制作</title>
+	<style type="text/css">
+		ol #ols{
+			width:400px;
+			list-style: none;
+			border-bottom : solid 3px green;
+			margin: 0 ;
+			padding-left: 0 auto;
+			padding-bottom: 20px;
+			*padding-bottom: 0; 
+		}
+		//设置id 是 ols ol下的 li
+		ol#ols li{
+			float:left;
+			height:30px;
+			margin: 0 10px -2px 0;
+			background-color:yellow;
+			color:black;
+			border:solid 1px green;
+			border-bottom : 0;
+			padding:0
+		}
+		ol#ols a:link,ol#ols a:visited{
+			display: block;
+			text-decoration: none;
+			padding: 5px 10px 3px 10px;
+		}
+		#tabcontent{
+			width:400px;
+			height:300px;
+			border: solid 5px yellow;
+			border-top-width: 0;
+		}
+		//选中后的样式
+		#ols li.tabSeleted{
+			background-color: gold;
+			display:true;
+			color:#FFFFFF;
+		}
+	</style>
+	<script type="text/javascript">
+		function showCenter(index){
+			//获取相应的层
+			var e = document.getElementById("content"+index);
+			e.style.display="";
+			for(i=1;i<4;i++){
+				if(i!=index){
+					var e1 = document.getElementById("content"+index);
+					e1.style.display= "none";
+					document.getElementById("tb"+i).className="";
+				}//改变选中的样式
+				else{
+					document.getElementById("tb"+i).className="tabSeleted";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ol id="ols">
+		<li onmouseover="showCenter(1)" id="tb1" class="tabSeleted">
+			<a href='#'_fcksavedurl='#'>新闻</a>
+		</li>
+		<li onmouseover="showCenter(2)"id="tb2" class="">
+			<a href='#'_fcksavedurl='#'>动漫</a>
+		</li>
+		<li onmouseover="showCenter(3)"id="tb3" class="">
+			<a href='#'_fcksavedurl='#'>电影</a>
+		</li>
+	</ol>
+	<div id="tabcontent">
+		<div id="content1">新闻内容</div>
+		<div id="content2" style="display:none">动漫内容</div>
+		<div id="content3" style="display:none">电影内容</div>
+	</div>
+</body>
+</html>

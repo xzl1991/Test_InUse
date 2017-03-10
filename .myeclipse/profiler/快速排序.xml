@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="profiler.settings.instrument.empty.methods">true</entry>
+<entry key="ProfilerCPUSettings_profile_runnables">true</entry>
+<entry key="ProfilerCPUSettings_filter_type">2</entry>
+<entry key="ProfilerMemorySettings_track_every">10</entry>
+<entry key="ProfilerMemorySettings_mode">4</entry>
+<entry key="ProfilerCPUSettings_root_classes">a_Socket.**
+a_http_test.**
+a_listener_Task.**
+a_logger.**
+a_request乱码.**
+a_tryFinally.**
+a_不常用类.**
+a_二维码.**
+a_加密算法.**
+a_反射测试.**
+a_发送邮件.**
+a_可重入锁.**
+a_图片水印.**
+a_大文件读取.**
+a_小工具.**
+a_常用算法.**
+a_数据库连接池.**
+a_日期类.**
+a_生成xml.**
+a_生成一定位数字符.**
+a_缓存.**
+a_路由算法.**
+a_通过ip获取city.**
+bean生命周期.**
+com.jd7.**
+com.test.Map_Set.**
+com.test.Object_Oriented.**
+com.test.TreeSort.**
+com.test.list.**
+com.test.overflow.**
+com.test.reference.**
+com.test.thread.**
+com.test.多线程.**
+com.testServlet.**
+</entry>
+<entry key="ProfilerCPUSettings_filter_value">a_Socket.*,
+a_http_test.*,
+a_listener_Task.*,
+a_logger.*,
+a_request乱码.*,
+a_tryFinally.*,
+a_不常用类.*,
+a_二维码.*,
+a_加密算法.*,
+a_反射测试.*,
+a_发送邮件.*,
+a_可重入锁.*,
+a_图片水印.*,
+a_大文件读取.*,
+a_小工具.*,
+a_常用算法.*,
+a_数据库连接池.*,
+a_日期类.*,
+a_生成xml.*,
+a_生成一定位数字符.*,
+a_缓存.*,
+a_路由算法.*,
+a_通过ip获取city.*,
+bean生命周期.*,
+com.jd7.*,
+com.test.Map_Set.*,
+com.test.Object_Oriented.*,
+com.test.TreeSort.*,
+com.test.list.*,
+com.test.overflow.*,
+com.test.reference.*,
+com.test.thread.*,
+com.test.多线程.*,
+com.testServlet.*</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">true</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="ProfilerMemorySettings_stacktraces">-1</entry>
+</properties>

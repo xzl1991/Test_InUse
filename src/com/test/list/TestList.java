@@ -43,7 +43,7 @@ public class TestList {
 		ls.toString();
 		ls.clear();
 //		final List<Integer> piDigits = [ 1,2,3,4,5,8 ]; 
-		boolean Character.equalsIgnoreCase('a', 'b'); 
+//		boolean Character.equalsIgnoreCase('a', 'b');
 //		ls.remove(-1);
 		for(int i=0;i<ls.size();i++){
 			System.out.println(ls.get(i));

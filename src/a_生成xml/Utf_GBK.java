@@ -13,7 +13,7 @@ public class Utf_GBK {
 	public static void main(String[] args) throws Exception {
 		String c = "1234,sss,撒的撒";
 		String d = "ss1";
-		System.out.println(d.+d);
+		System.out.println(d+ d);
 		System.out.println(c.substring(c.lastIndexOf(",")+1));
 		System.out.println(c.substring(0,c.indexOf(",")));
 		System.out.println(c.substring(c.indexOf(",")+1,c.lastIndexOf(",")));

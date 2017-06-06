@@ -1,4 +1,4 @@
 
-public class AbstractSon : AbstractTest {
-	
-}
+//public class AbstractSon : AbstractTest {
+//
+//}
